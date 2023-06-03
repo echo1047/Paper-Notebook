@@ -1,0 +1,3 @@
+$$\hat{\mathrm{Q}}^{\mathrm{k}+1} \leftarrow \arg \min _{\mathrm{Q}} \mathbb{E}_{\mathbf{s}, \mathbf{a}, \mathbf{s}^{\prime} \sim \mathcal{D}}\left[\left(\left(\mathrm{r}(\mathbf{s}, \mathbf{a})+\gamma \mathbb{E}_{\mathbf{a}^{\prime} \sim \hat{\pi}^{\mathrm{k}}\left(\mathbf{a}^{\prime} \mid \mathbf{s}^{\prime}\right)}\left[\hat{\mathrm{Q}}^{\mathrm{k}}\left(\mathbf{s}^{\prime}, \mathbf{a}^{\prime}\right)\right]\right)-\mathrm{Q}(\mathbf{s}, \mathbf{a})\right)^{2}\right]$$
+
+此式的含义 (policy evaluation): 计算所有的当前状态的Q和下一状态Q值的估计,计算它们的均方差,最后取参数Q的最小值.
